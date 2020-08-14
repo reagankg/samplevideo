@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Main</title>
+</head>
+
+<body id="home" data-spy="scroll" data-target="#main-nav">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
+    <div class="container">
+      <a href="#home" class="navbar-brand">        
+        <h3 class="d-inline align-middle">Noor Christian TV</h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="end.html" class="nav-link">End Times News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <img src="img/trump.jpg" width="300" height="200">
+          <a href="https://www.history.com/this-day-in-history/israel-palestine-peace-accord-signed">
+            <h2 class="post-title">
+              اسرائیل اور فلسطین امن معاہدہ پر دستخط</h2>
+            <h3 class="post-subtitle">
+              کئی عشروں کی خونی عداوت کے بعد ، اسرائیل اور فلسطین کے نمائندوں نے وائٹ ہاؤس کے جنوبی لان میں ملاقات کی اور امن کے فریم ورک پر دستخط کیے۔
+            </h3>
+          </a>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <img src="img/bible.jpg" width="300" height="200">
+          <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/second-coming-of-jesus-christ?lang=eng">
+            <h2 class="post-title">
+              یسوع مسیح کی دوسری آمد
+            </h2>
+            <h3 class="post-subtitle">
+              جب نجات دہندہ دوبارہ آئے گا ، وہ زمین اور اپنی بادشاہی کے طور پر دعوی کرنے کے لئے طاقت اور جلال میں آئے گا۔ اس کا دوسرا آنے والا ہزاروں سال کا آغاز ہوگا۔
+            </h3>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+ 
+  <!-- FOOTER -->
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-4">
+          <p class="lead">
+            Copyright &copy;
+            <span id="year"></span>
+          </p>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
